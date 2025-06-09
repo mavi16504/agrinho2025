@@ -1,0 +1,621 @@
+/* Color Theme Swatches in Hex */
+/* Nova Paleta de Cores: Tropical Forest */
+:root {
+    --tf-darkest-green: #071D26; /* Cor 1: O mais escuro, quase preto */
+    --tf-dark-green: #014034;   /* Cor 2: Verde escuro profundo */
+    --tf-medium-green: #038C65;  /* Cor 3: Verde médio vibrante */
+    --tf-light-green: #025940;  /* Cor 4: Verde um pouco mais claro */
+    --tf-accent-green: #038C3E;  /* Cor 5: Verde acentuado, para destaque */
+    --white: #FFFFFF;
+    --black: #000000;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--white); /* Fundo branco */
+    color: var(--tf-darkest-green); /* Cor padrão do texto mais escura */
+}
+
+/* --- Cabeçalho Principal --- */
+.cabecalho {
+    background-color: var(--tf-darkest-green); /* O mais escuro para o cabeçalho */
+    color: var(--white);
+    text-align: center;
+    padding: 60px 20px;
+    border-bottom: 8px solid var(--tf-medium-green); /* Linha de destaque mais grossa */
+}
+
+.cabecalho h1 {
+    font-size: 3.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+}
+
+.cabecalho h3 {
+    color: var(--tf-accent-green); /* Verde acentuado para o subtítulo */
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+/* --- Barra de Navegação (Navbar) - NOVO DESIGN --- */
+.navbar {
+    background-color: var(--tf-dark-green); /* Verde escuro profundo para a navbar */
+    padding: 18px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-top: 3px solid var(--tf-medium-green);
+}
+
+.navbar-nav .nav-link {
+    color: var(--white) !important;
+    font-weight: bold;
+    font-size: 1.15rem;
+    padding: 1rem 1.5rem;
+    margin: 0 8px;
+    border-radius: 50px;
+    transition: all 0.4s ease-in-out;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.navbar-nav .nav-link::before {
+    content: '';
+    position: absolute;
+    bottom: 5px;
+    left: 10%;
+    width: 80%;
+    height: 3px;
+    background-color: var(--tf-accent-green);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover::before,
+.navbar-nav .nav-link.active::before {
+    transform: scaleX(1);
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: var(--tf-light-green);
+    color: #FFFFFF !important; /* Texto escuro no hover */
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+
+.navbar-nav .nav-link.active {
+    background-color: var(--tf-medium-green);
+    color: var(--white) !important;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.navbar-toggler {
+    border-color: var(--tf-medium-green);
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%283, 140, 101, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* --- Seções de Conteúdo (Genérico) --- */
+.section-title {
+    color: var(--tf-darkest-green);
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 30px;
+    border-bottom: 4px solid var(--tf-medium-green);
+    padding-bottom: 12px;
+    display: inline-block;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.section-title.text-center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.text-justify {
+    text-align: justify;
+    line-height: 1.9;
+    font-size: 1.15rem;
+    color: var(--tf-darkest-green); /* Texto em verde mais escuro para contraste */
+}
+
+/* Imagens */
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+
+.rounded {
+    border-radius: 18px !important;
+}
+
+.shadow-sm {
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.1)!important;
+}
+
+.shadow-lg {
+    box-shadow: 0 1rem 3rem rgba(0,0,0,.2)!important;
+}
+
+/* Estilos para cards (Impacto e Benefícios) */
+.card {
+    border: none;
+    border-radius: 18px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    background-color: var(--white);
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
+}
+
+.card-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.3;
+    color: var(--tf-darkest-green);
+}
+
+.card-text {
+    color: var(--tf-dark-green);
+    line-height: 1.7;
+    font-size: 1.05rem;
+}
+
+/* Botões genéricos */
+.btn-primary {
+    background-color: var(--tf-accent-green);
+    border-color: var(--tf-accent-green);
+    color: var(--white);
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+    border-radius: 30px;
+    padding: 12px 25px;
+    font-weight: bold;
+}
+
+.btn-primary:hover {
+    background-color: var(--tf-dark-green);
+    border-color: var(--tf-dark-green);
+    transform: translateY(-2px);
+}
+
+.btn-outline-success {
+    border-color: var(--tf-medium-green);
+    color: var(--tf-medium-green);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    border-radius: 30px;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+
+.btn-outline-success:hover {
+    background-color: var(--tf-medium-green);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+/* --- Rodapé --- */
+.footer {
+    background-color: var(--tf-darkest-green);
+    color: var(--white);
+    text-align: center;
+    padding: 30px;
+    font-size: 1rem;
+    margin-top: 60px;
+}
+
+/* --- CLASSES QUE JÁ EXISTIAM NO SEU HTML/CSS BASE --- */
+.alinha {
+    text-align: justify;
+}
+
+.img-agro {
+    width: 300px;
+    border-radius: 15px;
+}
+
+.img-card {
+    max-height: 250px; /* Mantém a altura máxima para imagens de card */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+}
+
+.img-slide {
+    max-height: 600px; /* Altura máxima para imagens do carrossel */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer */
+}
+
+/* --- Responsividade (ajustes para telas menores) --- */
+@media (max-width: 768px) {
+    .cabecalho h1 {
+        font-size: 2.8rem;
+        letter-spacing: 1px;
+    }
+
+    .cabecalho h3 {
+        font-size: 1.6rem;
+    }
+
+    .navbar-nav .nav-link {
+        font-size: 1rem;
+        padding: 0.8rem 1rem;
+        margin: 5px 0;
+        border-radius: 10px;
+        text-align: center;
+    }
+
+    .navbar-nav .nav-link::before {
+        height: 2px;
+        bottom: 3px;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .text-justify {
+        font-size: 1.05rem;
+    }
+
+    .row > .col {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .row > .col:last-child {
+        margin-bottom: 0;
+    }
+
+    .img-agro {
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .card {
+        margin: 0 auto 20px auto;
+        max-width: 300px;
+    }
+
+    .img-slide {
+        max-height: 300px; /* Ajuste para carrossel em mobile */
+    }
+}
+
+@media (max-width: 576px) {
+    .cabecalho {
+        padding: 30px 10px;
+    }
+
+    .cabecalho h1 {
+        font-size: 2.2rem;
+    }
+
+    .cabecalho h3 {
+        font-size: 1.3rem;
+    }
+
+    .section-title {
+        font-size: 1.8rem;
+    }
+
+    .footer {
+        padding: 20px;
+        font-size: 0.85rem;
+    }
+}
+/* --- Seção de Colunas Animais --- */
+.card-coluna {
+    border: none;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.card-coluna:hover {
+    transform: scale(1.05);
+}
+
+.card-coluna img {
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-coluna .card-body {
+    padding: 20px;
+    background-color: var(--gray-light);
+}
+
+.card-coluna .card-title {
+    font-size: 1.5rem;
+    color: var(--tf-darkest-green);
+    margin-bottom: 15px;
+    border-bottom: 3px solid var(--tf-accent-green);
+    padding-bottom: 10px;
+}
+/* --- Linha de separação customizada --- */
+.hr-custom {
+    border: none;
+    height: 3px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--tf-medium-green), rgba(0, 0, 0, 0));
+    opacity: 0.7;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+/* --- Seção de Duas Colunas (Bem-Estar) --- */
+.info-duas-colunas {
+    padding: 40px 0;
+}
+
+.card-bem-estar {
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 450px; /* Altura mínima para equilibrar os cards */
+    display: flex;
+    flex-direction: column;
+}
+
+.card-bem-estar:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.card-bem-estar .card-body {
+    padding: 30px;
+    flex-grow: 1;
+}
+
+.card-bem-estar .card-title {
+    font-family: var(--heading-font);
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
+    border-bottom: 4px solid; /* A cor da borda será definida pelas classes .card-verdadeiro ou .card-falso */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-bem-estar .card-title i {
+    font-size: 2.2rem; /* Tamanho do ícone */
+}
+
+.card-bem-estar ul {
+    list-style: none; /* Remove os marcadores padrão da lista */
+    padding-left: 0;
+}
+
+.card-bem-estar ul li {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    line-height: 1.5;
+    padding-left: 30px; /* Espaço para o pseudo-elemento */
+    position: relative;
+    color: var(--tf-dark-green);
+}
+
+.card-bem-estar ul li strong {
+    color: var(--tf-darkest-green);
+}
+
+/* Estilos para "O Que É Bem-Estar Animal" */
+.card-verdadeiro {
+    background-color: var(--gray-light); /* Cor de fundo suave */
+    border-color: var(--green-success); /* Borda verde */
+}
+
+.card-verdadeiro .card-title {
+    color: var(--green-success);
+    border-color: var(--green-success);
+}
+
+.card-verdadeiro ul li::before {
+    content: "\2713"; /* Caractere de checkmark */
+    color: var(--green-success);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* Estilos para "O Que NÃO É Bem-Estar Animal" */
+.card-falso {
+    background-color: var(--gray-light); /* Cor de fundo suave */
+    border-color: var(--red-alert); /* Borda vermelha */
+}
+
+.card-falso .card-title {
+    color: var(--red-alert);
+    border-color: var(--red-alert);
+}
+
+.card-falso ul li::before {
+    content: "\2717"; /* Caractere de X */
+    color: var(--red-alert);
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+/* --- Card Saiba Mais --- */
+.card-saiba-mais {
+    max-width: 700px; /* Largura máxima para o card */
+    border: 2px solid var(--tf-accent-green);
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    background-color: var(--gray-light);
+    padding: 30px;
+    text-align: center;
+}
+
+.card-saiba-mais .card-title-saiba-mais {
+    font-family: var(--heading-font);
+    font-size: 2rem;
+    color: var(--tf-darkest-green);
+    margin-bottom: 15px;
+}
+
+.card-saiba-mais .card-text-saiba-mais {
+    font-size: 1.1rem;
+    color: var(--tf-dark-green);
+    line-height: 1.6;
+}
+
+.btn-saiba-mais {
+    background-color: var(--tf-medium-green);
+    color: var(--white);
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none; /* Garante que não há sublinhado */
+}
+
+.btn-saiba-mais:hover {
+    background-color: var(--tf-light-green);
+    transform: translateY(-3px);
+    color: var(--white); /* Mantém a cor do texto branca no hover */
+}
+
+.btn-saiba-mais i {
+    margin-left: 8px;
+    transition: transform 0.3s ease;
+}
+
+.btn-saiba-mais:hover i {
+    transform: translateX(3px); /* Pequeno movimento da seta no hover */
+}
+
+/* Responsividade para o card Saiba Mais */
+@media (max-width: 768px) {
+    .card-saiba-mais .card-title-saiba-mais {
+        font-size: 1.8rem;
+    }
+    .card-saiba-mais .card-text-saiba-mais {
+        font-size: 1rem;
+    }
+    .btn-saiba-mais {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-saiba-mais {
+        padding: 20px;
+    }
+    .card-saiba-mais .card-title-saiba-mais {
+        font-size: 1.5rem;
+    }
+    .card-saiba-mais .card-text-saiba-mais {
+        font-size: 0.95rem;
+    }
+}
+/* --- Card do Formulário de Comentário --- */
+.card-comentario {
+    background-color: var(--gray-light); /* Fundo claro para o card */
+    border: 1px solid var(--gray-medium);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+}
+
+.card-comentario .lead {
+    color: var(--tf-dark-green);
+    font-size: 1.15rem;
+}
+
+/* --- Estilos para Labels do Formulário --- */
+.custom-label {
+    font-weight: bold;
+    color: var(--tf-darkest-green);
+    margin-bottom: 8px;
+    display: block; /* Garante que a label ocupe sua própria linha */
+}
+
+/* --- Estilos para Inputs e Textarea --- */
+.custom-input,
+.custom-textarea,
+.custom-select {
+    border: 1px solid var(--tf-light-green);
+    border-radius: 8px;
+    padding: 10px 15px;
+    font-size: 1rem;
+    color: var(--tf-dark-green);
+    transition: all 0.3s ease;
+}
+
+.custom-input:focus,
+.custom-textarea:focus,
+.custom-select:focus {
+    border-color: var(--tf-medium-green);
+    box-shadow: 0 0 0 0.25rem rgba(3, 140, 101, 0.25); /* Sombra do foco Bootstrap customizada */
+    outline: none;
+}
+
+/* Placeholder color */
+.custom-input::placeholder,
+.custom-textarea::placeholder {
+    color: var(--gray-medium);
+    opacity: 1; /* Firefox */
+}
+
+/* --- Estilos para Botões --- */
+.btn-submit-comentario,
+.btn-reset-comentario {
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    display: flex; /* Para alinhar ícone e texto */
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-submit-comentario {
+    background-color: var(--tf-medium-green);
+    color: var(--white);
+    border: 2px solid var(--tf-medium-green);
+}
+
+.btn-submit-comentario:hover {
+    background-color: var(--tf-light-green);
+    border-color: var(--tf-light-green);
+    transform: translateY(-2px);
+    color: var(--white);
+}
+
+.btn-reset-comentario {
+    background-color: transparent;
+    color: var(--tf-dark-green);
+    border: 2px solid var(--tf-dark-green);
+}
+
+.btn-reset-comentario:hover {
+    background-color: var(--tf-dark-green);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+/* Ícones nos botões */
+.btn-submit-comentario i,
+.btn-reset-comentario i {
+    margin-right: 8px;
+}
